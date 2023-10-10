@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 import { Attachment, Course } from "@prisma/client";
 import { FileUpload } from "@/lib/file-upload";
 
-interface AttchmentFormProps {
+interface AttachmentFormProps {
   initialData: Course & { attachments: Attachment[] };
   courseId: string;
 }
@@ -21,10 +21,10 @@ const formSchema = z.object({
   url: z.string().min(1),
 });
 
-export const AttchmentForm = ({
+export const AttachmentForm = ({
   initialData,
   courseId,
-}: AttchmentFormProps) => {
+}: AttachmentFormProps) => {
   const [isEditing, setIsEditing] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
