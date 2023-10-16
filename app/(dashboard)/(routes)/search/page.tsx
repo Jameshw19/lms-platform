@@ -16,7 +16,6 @@ const SearchPage = async () => {
       <div className="p-6">
         <Categories items={categories} />
       </div>
-      ;
     </>
   );
 };
