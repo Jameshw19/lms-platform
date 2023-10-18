@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useConfettiStore } from "@/hooks/use-confetti-store";
 import axios from "axios";
 import { CheckCircle, XCircle } from "lucide-react";
-import next from "next";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -36,9 +35,11 @@ export const CourseProgressButton = ({
           isCompleted: !isCompleted,
         }
       );
+
       if (!isCompleted && !nextChapterId) {
         confetti.onOpen;
       }
+      
       if (!isCompleted && nextChapterId) {
         router.push(`/courses/${courseId}/chapters/${nextChapterId}`);
       }
