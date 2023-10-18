@@ -1,3 +1,5 @@
+import { Progress } from "./ui/progress";
+
 interface CourseProgressProps {
   value: number;
   variant?: "default" | "success";
@@ -18,7 +20,9 @@ export const CourseProgress = ({
   variant,
   size,
 }: CourseProgressProps) => {
-  return <div>
-    
-  </div>;
+  return (
+    <div>
+      <Progress className="h-2 " value={value} variant={variant} />
+    </div>
+  );
 };
